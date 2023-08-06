@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximusProfitus.API", "MaximusProfitus.API\MaximusProfitus.API.csproj", "{983BCF76-8784-4C06-8116-A245BECB1741}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximusProfitus.Tests", "MaximusProfitus.Tests\MaximusProfitus.Tests.csproj", "{AFEA41A8-74BD-46F4-95FE-5DB4C6D23BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{983BCF76-8784-4C06-8116-A245BECB1741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983BCF76-8784-4C06-8116-A245BECB1741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983BCF76-8784-4C06-8116-A245BECB1741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEA41A8-74BD-46F4-95FE-5DB4C6D23BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEA41A8-74BD-46F4-95FE-5DB4C6D23BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEA41A8-74BD-46F4-95FE-5DB4C6D23BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEA41A8-74BD-46F4-95FE-5DB4C6D23BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
