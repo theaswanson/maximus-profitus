@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using ShopifySharp;
 using System;
@@ -8,9 +9,14 @@ namespace MaximusProfitus.Tests;
 
 public class ShopifyTests
 {
+    private IConfigurationRoot _configuration;
+
     [SetUp]
     public void Setup()
     {
+        _configuration = new ConfigurationBuilder()
+            .AddUserSecrets<ShopifyTests>()
+            .Build();
     }
 
     [Test]
@@ -25,10 +31,10 @@ public class ShopifyTests
         Console.WriteLine(string.Join(", ", products.Items.Select(p => p.Title)));
     }
 
-    private static ProductService BuildProductService()
+    private ProductService BuildProductService()
     {
-        var myShopifyUrl = "https://quickstart-d97c14a1.myshopify.com";
-        var accessToken = "REPLACE-ME";
+        var myShopifyUrl = _configuration["Shopify:MyShopifyUrl"];
+        var accessToken = _configuration["Shopify:AccessToken"];
 
         return new ProductService(myShopifyUrl, accessToken);
     }
