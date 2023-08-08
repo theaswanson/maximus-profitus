@@ -2,6 +2,6 @@
 {
     public interface IProductService
     {
-        Task<IEnumerable<Product>> GetAllProductsAsync();
+        Task<IEnumerable<Product>> GetAllProductsAsync(CancellationToken cancellationToken = default);
     }
 }

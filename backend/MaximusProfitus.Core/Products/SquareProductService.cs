@@ -11,9 +11,9 @@ namespace MaximusProfitus.Core.Products
             _squareClient = squareClient;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task<IEnumerable<Product>> GetAllProductsAsync(CancellationToken cancellationToken = default)
         {
-            var response = await _squareClient.CatalogApi.ListCatalogAsync();
+            var response = await _squareClient.CatalogApi.ListCatalogAsync(cancellationToken: cancellationToken);
 
             if (response.Objects is null)
             {
