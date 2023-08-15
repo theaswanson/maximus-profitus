@@ -20,7 +20,7 @@ namespace MaximusProfitus.Core.Products
                 return Enumerable.Empty<Product>();
             }
 
-            return response.Objects.Select(x => new Product { Name = x.Id });
+            return response.Objects.Select(x => new Product { Name = x.ItemData.Name });
         }
     }
 }

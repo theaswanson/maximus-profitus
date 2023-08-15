@@ -27,7 +27,7 @@ public class SquareProductServiceTests
         catalogApi.Setup(c => c.ListCatalogAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<long?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new ListCatalogResponse(objects: new List<CatalogObject>
             {
-                new CatalogObject(default, id: "ABC123")
+                new CatalogObject(default, default, itemData: new CatalogItem(name: "ABC123"))
             }));
 
         _squareClient.SetupGet(c => c.CatalogApi).Returns(catalogApi.Object);
